@@ -1,0 +1,154 @@
+/* === GLOBAL STYLES === */
+
+
+.wrapper {
+    background-color: #485461;
+    background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    padding: 50px 0;
+    height: 100%;
+}
+
+.row {
+
+    margin: 15px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.row:last-child {
+    margin-bottom: 0px;
+}
+
+
+
+.row:nth-of-type(1) .container {
+    width: 801px;
+    height: 331px;
+    margin-left: 480px;
+    margin-top: -200px;
+}
+
+.row img {
+    
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.row .caption {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* 
+    ===== Effect 1 =====
+*/
+.effect1 {
+    overflow: hidden;
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+    position: relative;
+}
+
+.effect1 img {
+    position: relative;
+    
+}
+
+/*Line*/
+.effect1 .caption:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    width: 3px;
+    height: 0;
+    background-color: #fff;
+    transition: top .5s, height .5s;
+}
+
+.effect1:hover .caption:before, .effect1:active .caption:before {
+    top: 0;
+    height: 100%;
+}
+
+/*Left & Right Side*/
+.effect1 .leftSide,
+.effect1 .rightSide {
+    position: absolute;
+    top: 0;
+    left: -125%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .2) 100%);
+    transition: left .7s;
+}
+
+.effect1 .rightSide {
+    left: 125%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .2) 100%);
+}
+
+.effect1:hover .leftSide,
+.effect1:active .leftSide {
+    left: 0;
+}
+
+.effect1:hover .rightSide,
+.effect1:active .rightSide {
+    left: 49%;
+}
+
+/* Text */
+.effect1 .leftInfo,
+.effect1 .rightInfo {
+    opacity: 0;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    transition: opacity .6s, left .6s;
+}
+
+.effect1 .leftInfo {
+    color: black;
+    transform: translate(-100%, -50%);
+    left: 0;
+}
+
+.effect1 .rightInfo {
+    transform: translateY(-50%);
+    left: 100%;
+}
+
+.effect1:hover .leftInfo,
+.effect1:active .leftInfo
+{
+    opacity: 1;
+    left: 50%;
+}
+
+.effect1:hover .rightInfo,
+.effect1:active .rightInfo {
+    opacity: 1;
+    left: 50%;
+}
+
+
+
+
+
+

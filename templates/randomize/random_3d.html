@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="{{ url_for('static', filename='css/style_Rand.css') }}" rel="stylesheet">  
+
+</head>
+
+<body>
+    {% block content %} 
+    <div id="drag-container">
+        <div id="spin-container">
+            {%if custom%}
+          <!-- Add your images (or video) here -->
+          <img style="display: block; margin: auto;" src='data:image/jpeg;base64,{{ custom.villager}}' />
+          <img style="display: block; margin: auto;" src='data:image/jpeg;base64,{{ custom.accessory}}' width="110" height="110" />
+          <img style="display: block; margin: auto;" src='data:image/jpeg;base64,{{ custom.dressup}}' width="110" height="110" />
+          <img style="display: block; margin: auto;" src='data:image/jpeg;base64,{{ custom.wallpaper}}' width="110" height="110" />
+          <img style="display: block; margin: auto;" src='data:image/jpeg;base64,{{ custom.tool}}' width="110" height="110" />
+          <img style="display: block; margin: auto;" src='data:image/jpeg;base64,{{ custom.floor}}' width="110" height="110" />
+          {% endif %}
+
+        </div>
+        <div id="ground"></div>
+      </div>
+      
+
+      {% endblock %} 
+</body>
+
+<script src="{{ url_for('static', filename='css/sp.js') }}"></script>
+</html>

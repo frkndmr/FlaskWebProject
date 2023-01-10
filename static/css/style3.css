@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+  
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  section {
+    height: 100vh;
+    position: relative;
+  }
+  #section-1 {
+
+  }
+  a#scroll-btn {
+    position: absolute;
+    
+    height: 10em;
+    width: 6.25em;
+    border: 0.5em solid #ffffff;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 6.25em;
+    border-radius: 3em;
+  }
+  a#scroll-btn:before {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 1.2em;
+    height: 1.2em;
+    width: 1.2em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: move-down 2s infinite;
+  }
+  @keyframes move-down {
+    80% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(5.3em);
+      opacity: 0;
+    }
+  }
+  a#scroll-btn:after {
+    position: absolute;
+    content: "SCROLL DOWN";
+    width: 12em;
+    display: block;
+    width: 12em;
+    text-align: center;
+    left: -4.2em;
+    bottom: -2.5em;
+    font-size: 1.6em;
+    color: #ffffff;
+    letter-spacing: 3px;
+    font-weight: 600;
+  }
+  #section-2 {
+    background-color: #485461;
+    background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+
+  }
+  @media screen and (max-width: 500px) {
+    a#scroll-btn {
+      font-size: 12px;
+    }
+  }
+  
